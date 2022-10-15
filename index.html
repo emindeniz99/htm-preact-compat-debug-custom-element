@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/es-module-shims@1.6.1/dist/es-module-shims.js"
+    ></script>
+    <!--  Preact and Import Module Map  -->
+    <script type="importmap">
+      {
+        "imports": {
+          "htm": "https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.module.js",
+          "preact": "https://cdn.jsdelivr.net/npm/preact@10.11.1/dist/preact.module.js",
+          "preact/hooks": "https://cdn.jsdelivr.net/npm/preact@10.11.1/hooks/dist/hooks.module.js",
+          "preact/debug": "https://cdn.jsdelivr.net/npm/preact@10.11.1/debug/dist/debug.module.js",
+          "preact-custom-element": "https://cdn.jsdelivr.net/npm/preact-custom-element@4.2.1/dist/preact-ce.module.js",
+          "preact/devtools": "https://cdn.jsdelivr.net/npm/preact@10.11.1/devtools/dist/devtools.module.js",
+          "preact/compat": "https://cdn.jsdelivr.net/npm/preact@10.11.1/compat/dist/compat.module.js",
+          "htm-preact-compat-debug-custom-element": "/htm-preact-compat-debug-custom-element.module.js"
+        }
+      }
+    </script>
+    <link
+      rel="modulepreload"
+      href="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.module.js"
+    />
+    <link
+      rel="modulepreload"
+      href="https://cdn.jsdelivr.net/npm/preact@10.11.1/dist/preact.module.js"
+    />
+    <link
+      rel="modulepreload"
+      href="https://cdn.jsdelivr.net/npm/preact@10.11.1/hooks/dist/hooks.module.js"
+    />
+    <link
+      rel="modulepreload"
+      href="https://cdn.jsdelivr.net/npm/preact@10.11.1/debug/dist/debug.module.js"
+    />
+    <link
+      rel="modulepreload"
+      href="https://cdn.jsdelivr.net/npm/preact-custom-element@4.2.1/dist/preact-ce.module.js"
+    />
+    <link
+      rel="modulepreload"
+      href="https://cdn.jsdelivr.net/npm/preact@10.11.1/devtools/dist/devtools.module.js"
+    />
+    <link
+      rel="modulepreload"
+      href="https://cdn.jsdelivr.net/npm/preact@10.11.1/compat/dist/compat.module.js"
+    />
+  </head>
+  <body>
+    <h1>
+      This is a static tem plate, there is no bundler or bundling involved!
+    </h1>
+    <script type="module" src="/my-component.module.js"></script>
+    <x-my-component name="emin">
+      <span slot="heading">Nice heading</span>
+    </x-my-component>
+  </body>
+</html>
